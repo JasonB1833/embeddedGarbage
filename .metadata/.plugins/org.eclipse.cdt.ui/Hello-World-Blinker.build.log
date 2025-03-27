@@ -1,0 +1,17 @@
+14:11:44 **** Incremental Build of configuration Debug for project Hello-World-Blinker ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Hello-World-Blinker.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Jason\STM32CubeIDE\workspace_1.17.0\Hello-World-Blinker\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hello-World-Blinker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hello-World-Blinker.elf
+ 
+arm-none-eabi-size  Hello-World-Blinker.elf 
+arm-none-eabi-objdump -h -S Hello-World-Blinker.elf  > "Hello-World-Blinker.list"
+   text	   data	    bss	    dec	    hex	filename
+   8808	     12	   1644	  10464	   28e0	Hello-World-Blinker.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hello-World-Blinker.list
+ 
+
+14:11:45 Build Finished. 0 errors, 0 warnings. (took 926ms)
+
