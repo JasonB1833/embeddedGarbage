@@ -1,0 +1,1 @@
+Currently this is specifically configured for a 16x2 lcd for arduinos, will make changes to make it more portable as i go
