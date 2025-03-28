@@ -21,7 +21,7 @@ void lcd_i2c_init(void);
 void lcd_i2c_send_cmd(uint8_t cmd);
 void lcd_i2c_send_data(uint8_t data);
 void lcd_i2c_send_string(char *str);
-void lcd_i2c_set_cursor(uint8_t row, uinta8_t col);
+void lcd_i2c_set_cursor(uint8_t row, uint8_t col);
 void lcd_i2c_clear(void);
 
 

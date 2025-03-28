@@ -95,12 +95,11 @@ int main(void)
   MX_GPIO_Init(); 		// initialize GPIO
   MX_I2C1_Init();		// Initialize I2C1 peripheral
   /* USER CODE BEGIN 2 */
+  lcd_i2c_init();
 
-  uint8_t test_data[] = { 0x00 };
-
-
-   // test transmission to LCD I2C address
-  HAL_I2C_Master_Transmit(&hi2c1, 0x27 << 1, test_data, 1, HAL_MAX_DELAY);
+  lcd_i2c_send_string("HelloWorld");
+  lcd_i2c_set_cursor(1,0);
+  lcd_i2c_send_string("Ima genius");
 
   /* USER CODE END 2 */
 
